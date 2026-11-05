@@ -1,0 +1,29 @@
+{
+  "name": "openspace",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.119.0",
+    "glisse": "^0.5.0",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^5.1.1",
+    "typescript": "~5.6.2",
+    "vite": "^7.3.7"
+  }
+}
