@@ -755,7 +755,7 @@ function AuthScreen({ onToast }: { onToast: (s: string) => void }) {
       return
     }
     if (mode === 'reset') {
-      const result = await supabase.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin })
+      const result = await supabase.auth.resetPasswordForEmail(email, { redirectTo: appBaseUrl })
       setBusy(false)
       if (result.error) onToast(result.error.message)
       else { onToast('If that account exists, a reset link is on its way.'); setMode('login') }
