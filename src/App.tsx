@@ -18,6 +18,7 @@ const now = new Date()
 const ago = (days: number) => new Date(now.getTime() - days * 86400000).toISOString()
 const newId = () => window.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(16).slice(2)}`
 const brandIconSrc = `${import.meta.env.BASE_URL}idea-symbol.png`
+const appBaseUrl = `${window.location.origin}${import.meta.env.BASE_URL}`
 
 function makeEmptyData(user?: SessionUser): StoredData {
   return { workspaceId: '', workspaceName: '', ideas: [], comments: [], resources: [], tasks: [], tasksAvailable: true, activity: [], selectedIdeaId: null, selectionNote: '', currentUserId: user?.id ?? '', currentUserName: user?.user_metadata?.display_name ?? user?.email?.split('@')[0] ?? 'Workspace member', currentUserRole: 'collaborator', collaboratorName: null, collaboratorId: null, activeInvitationId: null, invitationExpiresAt: null, projectInfo: {} }
